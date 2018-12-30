@@ -57,6 +57,7 @@ Plug 'ruanyl/vim-fixmyjs'
 Plug 'bhurlow/vim-parinfer'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'marijnh/tern_for_vim'
 call plug#end()
 " }}}
 " Basic options {{{
@@ -185,9 +186,9 @@ nnoremap <down> g<down>
 nmap <C-h> :set list!<CR>
 
 " Map Ctrl-t to open a new editor tab, Ctrl-j and Ctrl-k for tab navigation
-nmap <C-t> :tabnew<CR>
-nmap <C-left> :tabprevious<CR>
-nmap <C-right> :tabnext<CR>
+nmap <C-n> :tabnew<CR>
+nmap <C-j> :tabprevious<CR>
+nmap <C-k> :tabnext<CR>
 
 noremap <C-up> <C-u>
 noremap <C-down> <C-d>
@@ -219,6 +220,9 @@ nnoremap g; g;zz
 nnoremap g, g,zz
 nnoremap <c-o> <c-o>zz
 inoremap <C-Return> <CR><Esc>O
+" Switch word cases
+nnoremap <leader>tu gUiw
+nnoremap <leader>tl guiw
 " }}}
 " Colors and fonts {{{
 syntax on
