@@ -552,7 +552,6 @@ noremap <Leader><Leader>f :Fixmyjs<CR>
 let g:fixmyjs_legacy_jshint = 1
 " }}}
 " YCM {{{
-" see https://github.com/Valloric/YouCompleteMe/issues/234#issuecomment-159824241
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 "let g:ycm_use_ultisnips_completer = 1
