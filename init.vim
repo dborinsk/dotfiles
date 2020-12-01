@@ -1,5 +1,5 @@
+" VIM-Plug {{{
 call plug#begin('~/.config/nvim/plugged')
-
 Plug 'vim-scripts/mru.vim'
 Plug 'rking/ag.vim'
 Plug 'sandeepcr529/Buffet.vim'
@@ -102,7 +102,10 @@ set splitright
 set lsp=1
 set relativenumber
 set timeoutlen=1000 ttimeoutlen=0
+<<<<<<< HEAD
 set shell=sh
+=======
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 
 " vim-which-key
 nnoremap <silent> <leader> :WhichKey '\'<CR>
@@ -234,7 +237,10 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 " NerdTree {{{
 let NERDTreeIgnore = ['\.pyc$', '\.orig$']	
 let NERDTreeQuitOnOpen=1
+<<<<<<< HEAD
 let NERDTreeShowHidden=1
+=======
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 
 " returns true if is NERDTree open/active
 function! NTisNTOpen()        
@@ -262,11 +268,15 @@ let g:ale_lint_on_text_changed='normal'
 let g:ale_python_flake8_args = '--ignore=E --select=E128'
 let g:ale_linters = {'clojure': ['clj-kondo', 'joker']}
 let g:ale_linters_explicit = 1
+<<<<<<< HEAD
 let g:ale_disable_lsp = 1
+=======
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 
 " }}}
 " deoplete {{{
 "let g:acp_enableAtStartup = 0
+<<<<<<< HEAD
 "let g:deoplete#enable_at_startup = 1 
 "let g:deoplete#disable_auto_complete=0
 "let g:neocomplete#sources#syntax#min_keyword_length = 3
@@ -276,6 +286,17 @@ let g:ale_disable_lsp = 1
 "let g:deoplete#keyword_patterns = {}
 "let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 "set shortmess+=c
+=======
+let g:deoplete#enable_at_startup = 1 
+let g:deoplete#disable_auto_complete=0
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:deoplete#auto_completion_start_length=3
+autocmd CompleteDone * pclose
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
+set shortmess+=c
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 " }}}
 " Folding {{{
 
@@ -509,6 +530,7 @@ let g:rooter_silent_chdir = 1
 " }}}
 " COC {{{
 " Use `[g` and `]g` to navigate diagnostics
+<<<<<<< HEAD
  nmap <silent> [g <Plug>(coc-diagnostic-prev)
  nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
@@ -542,13 +564,54 @@ nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
 " view all errors
 nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
 
+=======
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" List errors
+nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<cr>
+
+" list commands available in tsserver (and others)
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+
+" restart when tsserver gets wonky
+nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
+
+" view all errors
+nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
+
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 " manage extensions
 nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
 
 " rename the current word in the cursor
+<<<<<<< HEAD
  nmap <leader>cr  <Plug>(coc-rename)
  nmap <leader>cf  <Plug>(coc-format-selected)
  vmap <leader>cf  <Plug>(coc-format-selected)
+=======
+nmap <leader>cr  <Plug>(coc-rename)
+nmap <leader>cf  <Plug>(coc-format-selected)
+vmap <leader>cf  <Plug>(coc-format-selected)
+>>>>>>> f2f18f9df3a75a08b8e25dd2bcae945cbcd0af19
 
 " run code actions
 vmap <leader>ca  <Plug>(coc-codeaction-selected)
